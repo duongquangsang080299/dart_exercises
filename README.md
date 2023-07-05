@@ -24,8 +24,7 @@ Before you continue, ensure you meet the following requirements:
 ​
 ## Getting Started
 ​
-This project is a starting....
-...... 
+This project is a starting run Hello World. When you can run Hello World successful. You can unlock more exercises as you progress. They’re great practice and fun to do!
 ​
 ## Documents
 - [Plan Training Dart](https://docs.google.com/document/d/1k9KGrxuv_n_KazlG5lyqd6AOTHDUGlshsaMOrhVMaLw/edit)
@@ -79,12 +78,12 @@ This project is a starting....
 1. Clone the repository:
 ​
     ```
-    git clone https://github.com/ningo-agilityio/tuyen-tran-flutter-training.git
+    https://github.com/duongquangsang080299/dart_exercises.git
     ```
 2. Checkout branch:
 ​
     ```
-    git checkout -b <branch-name> /// Thay the branch name thanh branch em dang lam
+    git checkout -b <main> 
     ```
 3. Pull origin branch:
 ​
