@@ -28,7 +28,7 @@ This project is a starting....
 ...... 
 ​
 ## Documents
-- [Plan](Please include plan dart traning and estimage)
+- [Plan Training Dart](https://docs.google.com/document/d/1k9KGrxuv_n_KazlG5lyqd6AOTHDUGlshsaMOrhVMaLw/edit)
 - [Estimate](please insert link for estimate)
 ​
 ## Features
