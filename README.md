@@ -37,8 +37,8 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 2: Leap
 - [X] Exam 3: Two Fer
 - [X] Exam 4: Scarabble Score
-- [] Exam 5: High Score
-- [] Exam 6: Difference of Square
+- [X] Exam 5: Armstrong NumbersHigh Score
+- [X] Exam 6: High Score
 - [] Exam 7: Word Count
 - [] Exam 8: Space Age 
 - [] Exam 9: Bob
@@ -73,7 +73,7 @@ Before you continue, ensure you meet the following requirements:
 - [] Exam 38: Binary Search Tree
 - [] Exam 39: ISBN Verifier
 - [] Exam 40: Forth
-- [] Exam 41: Armstrong Numbers
+- [] Exam 41: Difference of Square
 
 ​
 ## Installation
