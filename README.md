@@ -8,7 +8,7 @@ In this exercise I will rely on Exercism. At the most basic level, Exercism is a
 
 ***Start date :*** 4/07/2023
 
-***Timeline:*** 1 weeks ( 6 days practice in total)
+***Timeline:*** 1 weeks ( 5 days practice in total)
 
 ***Target :***
 
