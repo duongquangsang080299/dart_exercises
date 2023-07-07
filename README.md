@@ -101,22 +101,18 @@ Before you continue, ensure you meet the following requirements:
 ## Installing Exercism on a  Mac
 
 You can use the Homebrew package manager to install the command-line client, or install it manually. Both methods involve using the command-line.
-
-'''
-
+```
     - $ brew update
 
     - $ brew install exercism
-'''
-
+   ```
 To install manually, download the appropriate version of exercism based on your processor architecture at the 
 [releases page](https://github.com/exercism/cli/releases/tag/v3.1.0), then extract the archive and put the binary in your path.
 
-'''
+```
+   - $ exersicm version
+   ```
 
-    - $ exersicm version
-
-'''
 
 ## Installing Exercism on Windows
 
@@ -126,31 +122,27 @@ The installer application will determine what version of the Exercism CLI you ne
 
 - When you CLI install complete
 
-'''
+```
+   exercism configure --token=[TOKEN]
+   ```
 
-    exercism configure --token=[TOKEN]
-
-'''
 ​​
 ## How to run
 
 * With Mac OS: Press <kbd>__COMMAND__</kbd> <kbd>__SHIFT__</kbd> <kbd>__D__</kbd>
 
-'''
-
+```
     $dart pub get
     $dart run test
+   ```
 
-'''
 
 * With Windows: Press <kbd>__CTRL__</kbd> <kbd>__SHIFT__</kbd> <kbd>__D__</kbd>
-
-'''
-
+```
     dart pub get
     dart run test
+   ```
 
-'''
 ## Technical
 - [Dart](https://dart.dev/)
 - [Exam](https://exercism.org/tracks/dart/exercises)
