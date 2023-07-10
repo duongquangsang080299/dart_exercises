@@ -49,10 +49,10 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 14: RNA Transcription
 - [X] Exam 15: Anagram
 - [] Exam 16: Pascal's Triangle
-- [] Exam 17: Resistor Color
+- [X] Exam 17: Resistor Color
 - [] Exam 18: Collatz Conjecture
-- [] Exam 19: Reverse String
-- [] Exam 20: Resistor Color Duo
+- [X] Exam 19: Reverse String
+- [X] Exam 20: Resistor Color Duo
 - [] Exam 21: Beer Song
 - [] Exam 22: Isogram
 - [] Exam 23: Nth Prime
