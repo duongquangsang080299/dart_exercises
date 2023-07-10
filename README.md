@@ -39,15 +39,15 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 4: Scarabble Score
 - [X] Exam 5: Armstrong NumbersHigh Score
 - [X] Exam 6: High Score
-- [] Exam 7: Word Count
-- [] Exam 8: Space Age 
-- [] Exam 9: Bob
-- [] Exam 10: Hamming
-- [] Exam 11: Raindrops
-- [] Exam 12: Gigasecond
-- [] Exam 13: Sum of Multiples
-- [] Exam 14: RNA Transcription
-- [] Exam 15: Anagram
+- [X] Exam 7: Word Count
+- [X] Exam 8: Space Age 
+- [X] Exam 9: Bob
+- [X] Exam 10: Hamming
+- [X] Exam 11: Raindrops
+- [X] Exam 12: Gigasecond
+- [X] Exam 13: Sum of Multiples
+- [X] Exam 14: RNA Transcription
+- [X] Exam 15: Anagram
 - [] Exam 16: Pascal's Triangle
 - [] Exam 17: Resistor Color
 - [] Exam 18: Collatz Conjecture
@@ -73,7 +73,7 @@ Before you continue, ensure you meet the following requirements:
 - [] Exam 38: Binary Search Tree
 - [] Exam 39: ISBN Verifier
 - [] Exam 40: Forth
-- [] Exam 41: Difference of Square
+- [X] Exam 41: Difference of Square
 
 ​
 ## Installation
