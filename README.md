@@ -60,8 +60,8 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 25: Darts
 - [X] Exam 26: Acronym
 - [] Exam 27: Phone Number
-- [] Exam 28: Triangle
-- [] Exam 29: Pangram
+- [X] Exam 28: Triangle
+- [X] Exam 29: Pangram
 - [] Exam 30: Prime Factors
 - [] Exam 31: Diamond
 - [] Exam 32: Matching Brackets
