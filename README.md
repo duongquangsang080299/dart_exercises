@@ -62,9 +62,9 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 27: Phone Number
 - [X] Exam 28: Triangle
 - [X] Exam 29: Pangram
-- [] Exam 30: Prime Factors (update to night)
-- [] Exam 31: Diamond (update to night)
-- [] Exam 32: Matching Brackets(update to night)
+- [X] Exam 30: Prime Factors 
+- [X] Exam 31: Diamond 
+- [X] Exam 32: Matching Brackets
 - [] Exam 33: Pig Latin 
 - [X] Exam 34: Robot Simulator
 - [] Exam 35: Minisweeper 
