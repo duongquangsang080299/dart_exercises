@@ -48,7 +48,7 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 13: Sum of Multiples
 - [X] Exam 14: RNA Transcription
 - [X] Exam 15: Anagram
-- [] Exam 16: Pascal's Triangle
+- [X] Exam 16: Pascal's Triangle
 - [X] Exam 17: Resistor Color
 - [X] Exam 18: Collatz Conjecture
 - [X] Exam 19: Reverse String
@@ -59,20 +59,20 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 24: Allergies
 - [X] Exam 25: Darts
 - [X] Exam 26: Acronym
-- [] Exam 27: Phone Number
+- [X] Exam 27: Phone Number
 - [X] Exam 28: Triangle
 - [X] Exam 29: Pangram
-- [] Exam 30: Prime Factors
-- [] Exam 31: Diamond
-- [] Exam 32: Matching Brackets
-- [] Exam 33: Pig Latin
-- [] Exam 34: Robot Simulator
-- [] Exam 35: Minisweeper
-- [] Exam 36: Luhn
-- [] Exam 37: Secret Handshake 
+- [] Exam 30: Prime Factors (update to night)
+- [] Exam 31: Diamond (update to night)
+- [] Exam 32: Matching Brackets(update to night)
+- [] Exam 33: Pig Latin 
+- [X] Exam 34: Robot Simulator
+- [] Exam 35: Minisweeper 
+- [X] Exam 36: Luhn
+- [X] Exam 37: Secret Handshake 
 - [] Exam 38: Binary Search Tree
-- [] Exam 39: ISBN Verifier
-- [] Exam 40: Forth
+- [X] Exam 39: ISBN Verifier
+- [] Exam 40: Forth 
 - [X] Exam 41: Difference of Square
 
 ​
