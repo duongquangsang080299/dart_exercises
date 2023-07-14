@@ -65,14 +65,14 @@ Before you continue, ensure you meet the following requirements:
 - [X] Exam 30: Prime Factors 
 - [X] Exam 31: Diamond 
 - [X] Exam 32: Matching Brackets
-- [] Exam 33: Pig Latin 
+- [X] Exam 33: Pig Latin 
 - [X] Exam 34: Robot Simulator
-- [] Exam 35: Minisweeper 
+- [X] Exam 35: Minisweeper 
 - [X] Exam 36: Luhn
 - [X] Exam 37: Secret Handshake 
-- [] Exam 38: Binary Search Tree
+- [X] Exam 38: Binary Search Tree
 - [X] Exam 39: ISBN Verifier
-- [] Exam 40: Forth 
+- [X] Exam 40: Forth 
 - [X] Exam 41: Difference of Square
 
 ​
