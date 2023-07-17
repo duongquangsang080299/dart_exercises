@@ -1,27 +1,27 @@
-// Define the ' Product' class with properties based on model data
-// ' Product' is defined with named parameters and marked ''
+// Class represent a product with properties
+// Each property is declared as final, meaning it cannot be changed after it is set.
 class Product {
-  String brandColor;
-  int balance;
-  String gender;
-  String dueDate;
-  int id;
-  String issuedDate;
-  String name;
-  String store;
-  bool bestSeller;
-  int saleOff;
-
-  Product(
-    this.brandColor,
-    this.balance,
-    this.gender,
-    this.dueDate,
-    this.id,
-    this.issuedDate,
-    this.name,
-    this.store,
-    this.bestSeller,
-    this.saleOff,
-  );
+  final String brandColor;
+  final int balance;
+  final String gender;
+  final String dueDate;
+  final int id;
+  final String issuedDate;
+  final String name;
+  final String store;
+  final bool bestSeller;
+  final int saleOff;
+// Class has a constructor take values for properties as required parameter
+  Product({
+    required this.brandColor,
+    required this.balance,
+    required this.gender,
+    required this.dueDate,
+    required this.id,
+    required this.issuedDate,
+    required this.name,
+    required this.store,
+    required this.bestSeller,
+    required this.saleOff,
+  });
 }
