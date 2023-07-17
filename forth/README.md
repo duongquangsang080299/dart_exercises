@@ -27,3 +27,13 @@ Words are case-insensitive.
 
 [forth]: https://en.wikipedia.org/wiki/Forth_%28programming_language%29
 
+## Source
+
+### Created by
+
+- @matthewmorgan
+
+### Contributed to by
+
+- @AlexeyBukin
+- @kytrinyx
