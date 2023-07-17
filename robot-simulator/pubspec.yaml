@@ -1,4 +1,4 @@
-name: 'isbn_verifier'
+name: 'robot_simulator'
 environment:
   sdk: '>=2.18.0 <3.0.0'
 dev_dependencies:
