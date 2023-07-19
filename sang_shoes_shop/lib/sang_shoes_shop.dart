@@ -3,17 +3,17 @@ import 'dart:math';
 import 'product_model.dart';
 
 // Class represents shop and function
-// Define variable name 'products' list of product.
+// Define a private list of 'Product' objects using the 'final' keyword.
 class SangShop {
   final List<Product> _products = [];
-// Class call method to populate the list
-  SangShop() {
-    _generateProducts();
-  }
-// Method use 'Random' class to generate random values.
+
+// Method to generate random products using the 'Random' class
+// It is asynchronous because it uses ' Future' and 'await'
   Future<void> _generateProducts() async {
+    //Create an instance of the 'Random' class to generate random values
     final Random random = Random();
     // List of stores selling various products
+    // 'const' is used because list does not change during the program execution.
     const List<String> stores = [
       'Shoes',
       'Clothes',
@@ -78,41 +78,49 @@ class SangShop {
       'female',
       'unisex',
     ];
-    // Create new 'Product' object with random property values for each iteration
-    // Then add it to the 'product' list
-    // Using 'for' loop iterates 50
+    // Loop create 50 random 'Product' object and add '_products' list
     for (int i = 1; i <= 50; i++) {
-      await Future.delayed(Duration(milliseconds: 50)); // Simulate async delay
+      /* Simulate an async delay of 100 milliseconds 
+      between generating each product*/
+      await Future.delayed(Duration(milliseconds: 100));
+      // Create a new 'Product' object with random properties
       var product = Product(
         id: i,
         name: 'Product $i',
-        store: stores[random
-            .nextInt(stores.length)], // Randomly selected form the 'store' list
-        brandColor: colors[random.nextInt(
-            colors.length)], // Randomly selected form the 'colors' list
-        balance: random.nextInt(1000), // Set random integer between 0 and 999
-        gender: genders[random
-            .nextInt(genders.length)], // Randomly selected from 'genders' list
+        // Randomly selected form the 'store' list
+        store: stores[random.nextInt(stores.length)],
+        // Randomly selected form the 'colors' list
+        brandColor: colors[random.nextInt(colors.length)],
+        // Set random integer between 0 and 999
+        balance: random.nextInt(1000),
+        // Randomly selected from 'genders' list
+        gender: genders[random.nextInt(genders.length)],
         dueDate: '23 May 2022',
         issuedDate: '13 May 2022',
-        bestSeller:
-            true, // A boolean flag indicating if the product is a best-seller.
+        // A boolean flag indicating if the product is a best-seller.
+        bestSeller: true,
         saleOff: 30,
       );
-      _products.add(
-          product); // After creating other product random,it's add in product
+      // Add the generated 'Product' to the '_product' list.
+      _products.add(product);
     }
   }
 
-  // Get a list of products (getter)
+  // Method to get the list of product (_products)
   List<Product> get products => _products;
 
-  // Search product based by ID
-  // 'Product?' it mean function can return 'Product' or Null if product 'id' not found in the list.
+  // Method to search for a product based on its ID.
+  /* It returns a 'Product' object if found, 
+  or null if the product with the specified ID is not in the list.*/
   Product? findProductById(int id) {
     try {
+      /* Using 'firstWhere' method to find the first product 
+       with the given ID in the '_product' list */
       return _products.firstWhere((product) => product.id == id);
     } catch (e) {
+      // If no product is found with the given ID
+      // The 'firstWhere' method throws an exception.
+      // We catch exception and return null to indicate  product is not found.
       return null;
     }
   }
@@ -122,93 +130,129 @@ class SangShop {
     return _products.where((product) => product.store == store).toList();
   }
 
-  // Add new product
-  void addProduct(Product product) {
+  // Method to add a new product to the list of products
+  void createProduct(Product product) {
+    // Add the new product to the '_products' list
     _products.add(product);
+
+    /* Search index of product in the '_products' list
+     that has the same ID as the new product.*/
+    final index = _products.indexWhere((p) => p.id == product.id);
+
+    // If the product with the same ID is found,update it with the new product
+    if (index != -1) {
+      _products[index] = product;
+      print('Product created successfully!');
+    } else {
+      // If the product with ID is not found,print a message indicating it
+      print('Product not found with ID: ${product.id}');
+    }
   }
 
-  // Update product based one provided ID with the given update product
+  /* Method to update a product based 
+  on the provided ID with the given updated product.*/
   void updateProduct(int id, Product updatedProduct) {
-    int index = _products.indexWhere((product) => product.id == id);
+    /* Search for the index of the product in the 
+    '_products' list that has the specified ID.*/
+    final index = _products.indexWhere((product) => product.id == id);
+    // If the product with the specified ID is found,
+    // Update it with the provided updated product.
     if (index != -1) {
       _products[index] = updatedProduct;
       print('Product updated successfully!');
     } else {
+      /* If the product with the specified ID is not found, 
+       print a message indicating it.*/
       print('Product not found with ID: $id');
     }
   }
 
-  // Delete a product based one the provided ID
+  // Method delete a product based one the provided ID
   void deleteProduct(int id) {
+    /* Remove the product from the '_products'
+     list that has the specified ID using 'removeWhere'*/
     _products.removeWhere((product) => product.id == id);
+    // Print a message to indicate that the product was deleted successfully.
+    print('Product deleted successfully!');
   }
 }
 
 // Function is the entry point of the program
 // Create class and its method call to perform various operations
 void main() async {
+  // Create instance of the 'SangShop' class
   final SangShop sangShop = SangShop();
 
   // Generate products asynchronously
   await sangShop._generateProducts();
 
   // See a list of products
-  final List<Product> productList = sangShop.products;
+  List<Product> productList = sangShop.products;
   for (Product product in productList) {
+    // Print the Json representation of each product
     print(jsonEncode(product.toJson()));
   }
   // Find product by ID
-  const productId = 40;
-  final Product? foundProduct = sangShop.findProductById(productId);
+  int productId = 40;
+  Product? foundProduct = sangShop.findProductById(productId);
   if (foundProduct != null) {
-    print('Found product: ${jsonEncode(foundProduct.toJson())}');
+    // If the product is found,print its details
+    print('Product found:');
+    print('ID: ${foundProduct.id}');
+    print('Name: ${foundProduct.name}');
+    print('Store: ${foundProduct.store}');
+    print('Balance: ${foundProduct.balance}');
+    print('gender: ${foundProduct.gender}');
   } else {
+    // If the product is not found,print a message indicating it
     print('Product not found with ID: $productId');
   }
 
   // Filter products by store
-  const String store = 'Socks';
-  final List<Product> filteredProducts = sangShop.filterProductsByStore(store);
-  for (final Product product in filteredProducts) {
-    print(jsonEncode(product.toJson()));
+  String filterStore = 'Socks';
+  print('Filtered products by store "$filterStore":');
+  List<Product> filteredProducts = sangShop.filterProductsByStore(filterStore);
+  for (Product product in filteredProducts) {
+    // Print the details of each product in the filtered list
+    print('ID: ${product.id}');
+    print('Name: ${product.name}');
+    print('Store: ${product.store}');
+    print('Balance: ${product.balance}');
+    print('gender: ${product.gender}');
   }
-
   // Add a new product to the list
   final Product newProduct = Product(
-    id: 51,
-    name: 'New Product',
-    store: 'Clothes',
-    gender: 'female',
-    brandColor: 'primary',
-    balance: 800,
-    issuedDate: '1 June 2023',
-    dueDate: '30 June 2023',
-    bestSeller: true,
-    saleOff: 20,
-  );
-
-  sangShop.addProduct(newProduct);
-  print('New product add: ${jsonEncode(newProduct.toJson())}');
-
-  //Update a product
-  const int updatedProductId = 20;
-  Product updatedProduct = Product(
-    id: 20,
-    name: 'Updated Product',
-    store: 'Shoes',
-    gender: 'male',
     brandColor: 'secondary',
-    balance: 900,
-    issuedDate: '1 June 2023',
+    balance: 500,
+    gender: 'unisex',
     dueDate: '30 June 2023',
+    id: 51,
+    issuedDate: '1 June 2023',
+    name: 'Product F',
+    store: 'Clothes',
     bestSeller: false,
     saleOff: 10,
   );
-  sangShop.updateProduct(updatedProductId, updatedProduct);
-  print('Product update: ${jsonEncode(updatedProduct.toJson())}');
 
-  // Remove a product from the list
-  const int deletedProductId = 12;
+  sangShop.createProduct(newProduct);
+
+  // Update an existing product in the list
+  int updatedProductId = 20;
+  Product updatedProduct = Product(
+    brandColor: 'primary',
+    balance: 800,
+    gender: 'male',
+    dueDate: '30 June 2023',
+    id: 20,
+    issuedDate: '1 June 2023',
+    name: 'Product X',
+    store: 'Shoes',
+    bestSeller: true,
+    saleOff: 20,
+  );
+  sangShop.updateProduct(updatedProductId, updatedProduct);
+
+  // Remove a product form the list
+  int deletedProductId = 12;
   sangShop.deleteProduct(deletedProductId);
-  print('Product deleted with ID:$deletedProductId');
 }

@@ -40,7 +40,7 @@ class Product {
   //     saleOff: json['saleOff'].toDouble(),
   //   );
   // }
-  // Convert Product instance to JSON
+  //Convert Product instance to JSON
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -56,34 +56,30 @@ class Product {
     };
   }
 
-  // Create a copy of the Product instance with update values
-//   Product copyWith({
-//     int? id,
-//     String? name,
-//     String? store,
-//     String? gender,
-//     String? brandColor,
-//     int? balance,
-//     String? issuedDate,
-//     String? dueDate,
-//     bool? bestSeller,
-//     int? saleOff,
-//   }) {
-//     return Product(
-//       id: id ?? this.id,
-//       name: name ?? this.name,
-//       store: store ?? this.store,
-//       gender: gender ?? this.gender,
-//       brandColor: brandColor ?? this.brandColor,
-//       balance: balance ?? this.balance,
-//       issuedDate: issuedDate ?? this.issuedDate,
-//       dueDate: dueDate ?? this.dueDate,
-//       bestSeller: bestSeller ?? this.bestSeller,
-//       saleOff: saleOff ?? this.saleOff,
-//     );
-//   }
-// }
-// Todo: Add format from Json/ to son
-// Have function copyWith
-// Fixme (request and optional)
+  //Create a copy of the Product instance with update values
+  Product copyWith({
+    int? id,
+    String? name,
+    String? store,
+    String? gender,
+    String? brandColor,
+    int? balance,
+    String? issuedDate,
+    String? dueDate,
+    bool? bestSeller,
+    int? saleOff,
+  }) {
+    return Product(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      store: store ?? this.store,
+      gender: gender ?? this.gender,
+      brandColor: brandColor ?? this.brandColor,
+      balance: balance ?? this.balance,
+      issuedDate: issuedDate ?? this.issuedDate,
+      dueDate: dueDate ?? this.dueDate,
+      bestSeller: bestSeller ?? this.bestSeller,
+      saleOff: saleOff ?? this.saleOff,
+    );
+  }
 }
