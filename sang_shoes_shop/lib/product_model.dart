@@ -1,5 +1,6 @@
 // Class represent a product with properties
 // Each property is declared as final, meaning it cannot be changed after it is set.
+
 class Product {
   final int id;
   final String brandColor;
@@ -25,21 +26,22 @@ class Product {
     this.issuedDate,
   });
 
-  // // Factory method to create a Product instance from Json
-  // factory Product.fromJson(Map<String, dynamic> json) {
-  //   return Product(
-  //     id: json['id'],
-  //     name: json['name'],
-  //     store: json['store'],
-  //     gender: json['gender'],
-  //     brandColor: json['brandColor'],
-  //     balance: json['balance'],
-  //     issuedDate: json['issuedDate'],
-  //     dueDate: json['dueDate'],
-  //     bestSeller: json['bestSeller'],
-  //     saleOff: json['saleOff'].toDouble(),
-  //   );
-  // }
+  // Factory method to create a Product instance from Json
+  factory Product.fromJson(Map<String, dynamic> json) {
+    return Product(
+      id: json['id'],
+      name: json['name'],
+      store: json['store'],
+      gender: json['gender'],
+      brandColor: json['brandColor'],
+      balance: json['balance'],
+      issuedDate: json['issuedDate'],
+      dueDate: json['dueDate'],
+      bestSeller: json['bestSeller'],
+      saleOff: json['saleOff'].toDouble(),
+    );
+  }
+
   //Convert Product instance to JSON
   Map<String, dynamic> toJson() {
     return {
